@@ -11,7 +11,7 @@ from .models import Produit
 @api_view(['GET'])
 def get_produits(request):
     """Retourne la liste des produits"""
-    produits = Produit.objects.all()[:50]
+    produits = Produit.objects.all()
     data = []
     for p in produits:
         data.append({
